@@ -38,8 +38,11 @@ class MainActivity : ComponentActivity() {
 
             VideoPlayerTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                  Box(modifier = Modifier.padding(innerPadding)){
+                      SimpleVideoUI(viewModel = viewModel, application = this@MainActivity.application)
+                  }
 
-                    SimpleVideoUI(viewModel = viewModel, application = this.application)
+
                 }
             }
         }
