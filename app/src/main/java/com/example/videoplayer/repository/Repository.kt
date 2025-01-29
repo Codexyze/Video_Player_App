@@ -55,7 +55,7 @@ class Repository {
                 // Generate a URI for the video's thumbnail.
                 // This is used to display a small preview image of the video.
                 val thumbnail = ContentUris.withAppendedId(
-                    MediaStore.Video.Thumbnails.EXTERNAL_CONTENT_URI,
+                    MediaStore.Video.Media.EXTERNAL_CONTENT_URI,
                     id.toLong() // Convert ID to Long since ContentUris requires it.
                 ).toString() // Convert the URI to a String.
 
